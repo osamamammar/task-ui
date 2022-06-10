@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { ApercuBold, ApercuMedium, ApercuRegular } from "./assets/fonts";
 
 const GlobalStyles = createGlobalStyle`
 :root{
@@ -17,6 +18,30 @@ const GlobalStyles = createGlobalStyle`
   --font-size-sm:13px;
   --font-size-xs:12px;
 }
+
+@font-face {
+    font-family: 'Apercu';
+    src: url(${ApercuBold}) format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Apercu';
+    src: url(${ApercuRegular}) format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Apercu';
+    src: url(${ApercuMedium}) format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 html {
   box-sizing: border-box;
