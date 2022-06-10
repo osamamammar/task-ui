@@ -1,9 +1,17 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import GlobalStyles from "./globalStyles";
+import { SnippingPage } from "./screens";
 
 function App() {
   return (
-    <div className="App">
-     
-    </div>
+    <>
+      <GlobalStyles />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<SnippingPage />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
