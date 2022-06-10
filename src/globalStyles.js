@@ -11,7 +11,7 @@ const GlobalStyles = createGlobalStyle`
   --gray-color:#575761;
   --green-color:#0bc189;
   --red-color:#fb4e78;
-  --btn-color:#3f5af7;
+  --blue-color:#3f5af7;
   --font-size-xl:20px;
   --font-size-lg:16px;
   --font-size-md:14px;
@@ -45,7 +45,6 @@ const GlobalStyles = createGlobalStyle`
 
 html {
   box-sizing: border-box;
-  font-size: 16px;
 }
 
 *, *:before, *:after {
@@ -63,6 +62,8 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul, label {
 
 body{
   background-color: var(--background-color-300);
+  color: var(--font-color-100);
+  font-size: 16px;
 }
 
 ol, ul {
@@ -78,7 +79,15 @@ img {
   height: auto;
 }
 
-
+.btn {
+  border: none;
+  color:var(--font-color-100);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
 .visually-hidden:not(:focus):not(:active) {
   border: 0;
   clip: rect(0 0 0 0);
