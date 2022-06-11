@@ -40,7 +40,7 @@ export const FormContainer = styled.form`
     line-height: 32px;
     color: #fff;
     font-size: 14px;
-    @media (max-width: 1120px) {
+    @media (max-width: 1140px) {
       display: none;
     }
   }

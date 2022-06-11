@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const MainContainer = styled.main`
-  width: 65%;
+  width: 68%;
   margin: auto;
+  max-width: 1140px;
   padding: 12px 0 24px;
   display: grid;
-  grid-template-columns: minmax(0, 580px) minmax(0, 406px);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   grid-template-rows: 1fr 1fr 1fr;
   gap: 20px 30px;
   grid-template-areas:
@@ -23,20 +24,34 @@ export const MainContainer = styled.main`
       "scam-box"
       "disclaimer";
   }
+  @media (min-width: 1500px) {
+    grid-template-columns: minmax(580px, 1fr) minmax(405px, 1fr);
+  }
+  @media (max-width: 1290px) {
+    width: 78%;
+  }
+  @media (max-width: 1100px) {
+    width: 88%;
+  }
 `;
 
+export const AsideContainer = styled.aside`
+  display: contents;
+`;
 export const SectionContainer = styled.section`
   grid-area: form;
 `;
-export const TokenDetailsContainer = styled.aside`
+export const TokenDetailsContainer = styled.section`
   grid-area: token-details;
   background-color: var(--background-color-200);
+  background: #32323e;
+  border-radius: 7px;
+  padding: 24px;
+  height: fit-content;
 `;
-export const ScamBoxContainer = styled.aside`
+export const ScamBoxContainer = styled(TokenDetailsContainer)`
   grid-area: scam-box;
-  background-color: var(--background-color-200);
 `;
-export const DisclaimerContainer = styled.aside`
+export const DisclaimerContainer = styled(TokenDetailsContainer)`
   grid-area: disclaimer;
-  background-color: var(--background-color-200);
 `;

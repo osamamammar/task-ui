@@ -162,7 +162,7 @@ export const StatisticsWrapper = styled.ul`
     align-items: center;
     gap: 6px;
   }
-  @media (max-width: 1355px) {
+  @media (max-width: 1105px) {
     display: ${(props) => (props.display ? props.display : "none")};
   }
 `;

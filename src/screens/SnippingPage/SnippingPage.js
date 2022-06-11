@@ -3,6 +3,7 @@ import { dangerAlert } from "../../assets";
 import { Footer, Header, SnippingForm, TokenDetails } from "../../components";
 import "./SnippingPage.styles";
 import {
+  AsideContainer,
   DisclaimerContainer,
   MainContainer,
   ScamBoxContainer,
@@ -19,23 +20,23 @@ const SnippingPage = () => {
           <SnippingForm />
         </SectionContainer>
 
-        <TokenDetailsContainer>
-          <TokenDetails />
-        </TokenDetailsContainer>
+        <AsideContainer>
+          <TokenDetailsContainer>
+            <TokenDetails />
+          </TokenDetailsContainer>
 
-        <ScamBoxContainer>
-          <h2>Snipping</h2>
-        </ScamBoxContainer>
+          <ScamBoxContainer></ScamBoxContainer>
 
-        <DisclaimerContainer>
-          <img
-            src={dangerAlert}
-            alt="danger-icon"
-            title="danger"
-            width={32}
-            height={32}
-          />
-        </DisclaimerContainer>
+          <DisclaimerContainer>
+            <img
+              src={dangerAlert}
+              alt="danger-icon"
+              title="danger"
+              width={32}
+              height={32}
+            />
+          </DisclaimerContainer>
+        </AsideContainer>
       </MainContainer>
       <Footer />
     </>
