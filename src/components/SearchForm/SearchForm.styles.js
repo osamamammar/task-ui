@@ -26,9 +26,6 @@ export const FormContainer = styled.form`
       color: var(--font-color-100);
       font-size: 14px;
     }
-    > input[type="search"]::placeholder {
-      color: #9997aa;
-    }
     > input[type="search"]::-webkit-search-cancel-button {
       -webkit-appearance: none;
     }

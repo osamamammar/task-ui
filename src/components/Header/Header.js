@@ -46,6 +46,7 @@ const Header = () => {
       </DivWrapper>
 
       <NavLeft className={sideBar ? "nav-menu active" : "nav-menu"}>
+        <img src={menuIcon} alt="close-icon" onClick={showSideBar} />
         <StatisticsWrapper justifyContent={"center"} display={"flex"}>
           <li className="info">
             <img src={usd} alt="usd" title="usd" width={18} height={18} />

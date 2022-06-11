@@ -79,6 +79,13 @@ img {
   height: auto;
 }
 
+input::placeholder{
+  color: #9997aa;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+
+}
+
 .btn {
   border: none;
   color:var(--font-color-100);

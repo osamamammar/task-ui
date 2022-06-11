@@ -4,7 +4,6 @@ export const HeaderContainer = styled.header`
   width: 100%;
   padding-inline: 24px;
   padding-block: 12px;
-  min-height: 90px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,6 +18,12 @@ export const NavLeft = styled.nav`
   gap: 10px;
   align-items: center;
   transition: background-color 850ms;
+  > img {
+    cursor: pointer;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
 
   &.nav-menu {
     display: none;
@@ -28,14 +33,20 @@ export const NavLeft = styled.nav`
     display: block;
     position: fixed;
     inset-inline-start: 0;
-    inset-block-start: 80px;
+    inset-block-start: 0;
     width: 250px;
     height: 100vh;
     background-color: var(--background-color-100);
     padding-inline: 20px;
     padding-block: 20px;
-    z-index: 1;
+    z-index: 200;
     transition: background-color 350ms;
+    @media (max-width: 450px) {
+      width: 100%;
+    }
+  }
+  > ul {
+    margin-block-start: 50px;
   }
 `;
 
@@ -49,6 +60,10 @@ export const DivWrapper = styled.div`
     border-radius: 7px;
     min-width: 40px;
     min-height: 40px;
+    transition: all 0.2s ease;
+    &:hover {
+      opacity: 0.5;
+    }
   }
 `;
 
@@ -83,7 +98,7 @@ export const LogoWrapper = styled(MenuWrapper)`
     padding-block: 0;
     padding-inline: 3px;
     border-radius: 3px;
-    @media (max-width: 320px) {
+    @media (max-width: 788px) {
       display: none;
     }
   }
@@ -106,6 +121,7 @@ export const NavRight = styled.nav`
       background-color: var(--background-color-200);
       padding-block: 17px;
       padding-inline: 24px;
+      margin-inline-start: 6px;
       border-radius: 7px;
       font-size: 14px;
       font-weight: 500;
@@ -146,7 +162,7 @@ export const StatisticsWrapper = styled.ul`
     align-items: center;
     gap: 6px;
   }
-  @media (max-width: 955px) {
+  @media (max-width: 1355px) {
     display: ${(props) => (props.display ? props.display : "none")};
   }
 `;
