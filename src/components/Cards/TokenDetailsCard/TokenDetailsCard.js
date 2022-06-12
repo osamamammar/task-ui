@@ -1,17 +1,17 @@
 import React from "react";
-import { dogelon } from "../../assets";
-import "./TokenDetails.styles";
+import { dogelon } from "../../../assets";
+import "./TokenDetailsCard.styles";
 import {
   DivWrapper,
   HeaderTitle,
   ListItem,
   ListItems,
-} from "./TokenDetails.styles";
+} from "./TokenDetailsCard.styles";
 
-const TokenDetails = () => {
+const TokenDetailsCard = () => {
   return (
     <>
-      <HeaderTitle>TokenDetails</HeaderTitle>
+      <HeaderTitle>TokenDetails:</HeaderTitle>
       <ListItems>
         <ListItem>
           <DivWrapper className="img-wrapper">
@@ -55,4 +55,4 @@ const TokenDetails = () => {
   );
 };
 
-export default TokenDetails;
+export default TokenDetailsCard;

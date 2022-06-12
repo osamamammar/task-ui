@@ -112,7 +112,7 @@ export const NavRight = styled.nav`
   .btn {
     gap: 10px;
     font-family: inherit;
-    @media (max-width: 1338px) {
+    @media (max-width: 1350px) {
       > .btn-title {
         display: none;
       }

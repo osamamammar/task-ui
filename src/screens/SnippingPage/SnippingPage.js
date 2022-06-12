@@ -1,7 +1,12 @@
 import React from "react";
-import { dangerAlert } from "../../assets";
-import { Footer, Header, SnippingForm, TokenDetails } from "../../components";
-import "./SnippingPage.styles";
+import {
+  DisclaimerCard,
+  Footer,
+  Header,
+  ScamBoxCard,
+  SnippingForm,
+  TokenDetailsCard,
+} from "../../components";
 import {
   AsideContainer,
   DisclaimerContainer,
@@ -22,19 +27,15 @@ const SnippingPage = () => {
 
         <AsideContainer>
           <TokenDetailsContainer>
-            <TokenDetails />
+            <TokenDetailsCard />
           </TokenDetailsContainer>
 
-          <ScamBoxContainer></ScamBoxContainer>
+          <ScamBoxContainer>
+            <ScamBoxCard />
+          </ScamBoxContainer>
 
           <DisclaimerContainer>
-            <img
-              src={dangerAlert}
-              alt="danger-icon"
-              title="danger"
-              width={32}
-              height={32}
-            />
+            <DisclaimerCard />
           </DisclaimerContainer>
         </AsideContainer>
       </MainContainer>

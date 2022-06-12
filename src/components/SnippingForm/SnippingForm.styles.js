@@ -6,6 +6,9 @@ export const FormContainer = styled.form`
   padding-inline: 24px;
   padding-block: 32px;
   border-radius: 7px;
+  .form-header {
+    margin-block-end: 8px;
+  }
   > hr {
     margin-block: 16px 16px;
     border: 0;
@@ -18,6 +21,12 @@ export const FormContainer = styled.form`
     line-height: 56px;
     font-weight: bold;
     font-size: 16px;
+    &:disabled {
+      background-color: var(--gray-color);
+    }
+  }
+  @media (max-width: 512px) {
+    padding-inline: 15px;
   }
 `;
 export const DivWrapper = styled.div`
@@ -32,6 +41,7 @@ export const DivWrapper = styled.div`
     font-size: 20px;
     font-weight: 500;
     display: inline-flex;
+    flex-wrap: wrap;
     align-items: baseline;
     justify-content: center;
     gap: 4px;
@@ -96,7 +106,7 @@ export const InputControl = styled.div`
       border-radius: 7px;
       line-height: 44px;
       font-size: 16px;
-      height: 44px;
+      height: auto;
       padding-inline: 20px 42px;
       color: #fff;
       border: none;
@@ -116,6 +126,11 @@ export const InputControl = styled.div`
 export const InputStyling = styled.div`
   position: relative;
   width: 49%;
+  > input {
+    text-align: center;
+    height: auto;
+    line-height: normal;
+  }
   > input::placeholder {
     color: #5f5e6c;
   }
@@ -138,8 +153,8 @@ export const InputStyling = styled.div`
   }
   > select {
     position: absolute;
-    inset-inline-end: 1px;
-    inset-block-start: 2px;
+    inset-inline-end: 3px;
+    inset-block-start: 3px;
     outline: transparent;
     padding-inline: 10px;
     padding-block: 10px;
@@ -173,30 +188,31 @@ export const InputStyling = styled.div`
   }
 
   button {
-    background-color: var(--background-color-100);
+    background-color: var(--background-color-200);
     z-index: 100;
     min-width: 36px;
-    height: 44px;
+    height: 36px;
     line-height: 36px;
     text-align: center;
     border-radius: 6px;
     &.plus,
     &.minus {
+      position: absolute;
       &:hover {
-        opacity: 0.8;
+        transform: scale(1.1);
       }
     }
     &.plus {
-      position: absolute;
-      inset-inline-end: 0;
-      inset-block-end: 0;
-      inset-block-start: 37px;
+      inset-inline-end: 4px;
+      inset-block-end: 4px;
     }
     &.minus {
-      position: absolute;
-      inset-inline-start: 0px;
-      inset-block-end: 0;
+      inset-inline-start: 4px;
+      inset-block-end: 4px;
     }
+  }
+  @media (max-width: 512px) {
+    width: 100%;
   }
 `;
 export const Wrapper = styled.div`

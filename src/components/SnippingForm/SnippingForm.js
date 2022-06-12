@@ -10,17 +10,17 @@ import {
 } from "./SnippingForm.styles";
 
 const SnippingForm = () => {
-  const [cake, setCake] = useState("");
-  const [bsc, setBsc] = useState("");
+  const [cake, setCake] = useState("PancakeSwap");
+  const [bsc, setBsc] = useState("BSC");
   const [address, setAddress] = useState("");
   const [buyAmount, setBuyAmount] = useState({
     amount: "",
-    currency: "",
+    currency: "BNB",
   });
   const [gasAmount, setGasAmount] = useState("");
   const [txLimit, setTxLimit] = useState("");
   const [numberOfBuys, setNumberOfBuys] = useState("");
-  const [checked, setChecked] = useState(true);
+  const [checked, setChecked] = useState(false);
   const [successValue, setSuccessValue] = useState(false);
   const [currentValue, setCurrentValue] = useState({
     maxSilppage: 0,
@@ -41,8 +41,6 @@ const SnippingForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
-
-  console.log(buyAmount);
 
   return (
     <FormContainer onSubmit={handleSubmit}>
@@ -345,18 +343,18 @@ const SnippingForm = () => {
         type="submit"
         title="sniping order"
         disabled={
-          currentValue &&
-          successValue &&
-          checked &&
-          numberOfBuys &&
-          txLimit &&
-          gasAmount &&
-          buyAmount &&
-          address &&
-          bsc &&
-          cake
-            ? false
-            : true
+          !currentValue ||
+          !successValue ||
+          !checked ||
+          !numberOfBuys ||
+          !txLimit ||
+          !gasAmount ||
+          !buyAmount ||
+          !address ||
+          !bsc ||
+          !cake
+            ? true
+            : false
         }
       >
         Place Sniping Order

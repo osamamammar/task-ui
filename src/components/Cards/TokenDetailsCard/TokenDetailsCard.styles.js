@@ -11,6 +11,9 @@ export const ListItems = styled.ul`
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
+  @media (max-width: 380px) {
+    gap: 1px;
+  }
 `;
 export const ListItem = styled.li`
   display: flex;
@@ -47,5 +50,8 @@ export const DivWrapper = styled.div`
     display: flex;
     align-items: center;
     margin-block-end: 8px;
+    .img-icon {
+      margin-inline-end: 4px;
+    }
   }
 `;
