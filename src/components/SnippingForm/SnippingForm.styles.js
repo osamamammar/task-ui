@@ -153,8 +153,8 @@ export const InputStyling = styled.div`
   }
   > select {
     position: absolute;
-    inset-inline-end: 3px;
-    inset-block-start: 3px;
+    inset-inline-end: 2px;
+    inset-block-start: 2px;
     outline: transparent;
     padding-inline: 10px;
     padding-block: 10px;
