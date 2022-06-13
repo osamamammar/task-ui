@@ -46,7 +46,6 @@ const SnippingForm = () => {
     startTransition(() => setFormData({ ...formData, [name]: value }));
   };
 
-  console.log(formData);
 
   const handleSubmit = (e) => {
     e.preventDefault();
