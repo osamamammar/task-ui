@@ -15,21 +15,7 @@ const SubmitBtn = ({
   txLimit,
   isSubmitted,
 }) => {
-  console.log(
-    address,
-    bsc,
-    buyAmount,
-    cake,
-    checkBoxState,
-    currency,
-    gasAmount,
-    maxBlocks,
-    maxSilppage,
-    numberOfBlocks,
-    numberOfBuys,
-    txLimit,
-    isSubmitted
-  );
+  
   return (
     <button
       className="btn btn-submit"
