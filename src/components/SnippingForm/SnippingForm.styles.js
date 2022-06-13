@@ -21,6 +21,10 @@ export const FormContainer = styled.form`
     line-height: 56px;
     font-weight: bold;
     font-size: 16px;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      opacity: 0.8;
+    }
     &:disabled {
       background-color: var(--gray-color);
     }
